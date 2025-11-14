@@ -1,0 +1,28 @@
+.link-item-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.link-item-container h6 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.link-item-container h6,
+.link-item-container a {
+  z-index: 2;
+}
+
+.image-container img {
+  position: absolute;
+  object-fit: contain;
+  width: 90px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}

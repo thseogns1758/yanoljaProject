@@ -1,65 +1,103 @@
-import Image from "next/image";
+import { sliderData } from "@/data/slideData";
+import { cardData } from "@/data/slideData";
+import { imageCardData } from "@/data/slideData";
+import { simpleImageCardData } from "@/data/slideData";
+
+import MainLayout from "@/components/MainLayout";
+import MainSwiperCarousel from "@/components/MainSwiperCarousel";
+import LinkItem from "@/components/common/LinkItem";
+import SlideCarousel from "@/components/common/SlideCarousel";
+import SectionLayoutBG from "@/components/SectionLayoutBG";
+import NewsBoard from "@/components/NewsBoard";
+import UseDataComponent from "@/components/UseDataComponent";
+import SnsComponent from "@/components/SnsComponent";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="relative">
+      <MainLayout
+        isMain
+        leftChildren={<MainSwiperCarousel sliderData={sliderData} />}
+        rightChildren={
+          <ul className="right_link">
+            <li>
+              <LinkItem
+                title="야놀자 매력도 지수"
+                link="https://www.yanolja-research.com/brand/attractiveness"
+                imageUrl="/asset/bg_chart.svg"
+                backgroundColor="#F54B1E"
+              />
+            </li>
+            <li>
+              <LinkItem
+                title="야놀자 브랜드자산 지수"
+                link="https://www.yanolja-research.com/brand/background"
+                imageUrl="/asset/bg_glass.svg"
+                backgroundColor="#E43608"
+              />
+            </li>
+            <li>
+              <LinkItem
+                title="데이터랩"
+                link="https://www.yanolja-research.com/datalab/tourism/about"
+                backgroundColor="#F54B1E"
+                imageUrl="/asset/datalab.svg"
+              />
+            </li>
+          </ul>
+        }
+      />
+      <MainLayout
+        leftChildren={
+          <SlideCarousel
+            slideData={cardData}
+            pageLink="https://www.yanolja-research.com/insight/list"
+            isScroll={true}
+            sectionTitle="인사이트 / 브리프"
+            breakpoints={{
+              0: { slidesPerView: 1.5 },
+              1024: { slidesPerView: 2.3 },
+              1280: { slidesPerView: 3.18 },
+            }}
+          />
+        }
+        rightChildren={
+          <SlideCarousel
+            slideData={imageCardData}
+            pageLink="https://www.yanolja-research.com/trend/list"
+            sectionTitle="동향보고서"
+            breakpoints={{
+              0: { slidesPerView: 1.5 },
+              480: { slidesPerView: 3.1 },
+              768: { slidesPerView: 1 },
+            }}
+          />
+        }
+        overflow="visible"
+      />
+      <SectionLayoutBG>
+        <SlideCarousel
+          slideData={simpleImageCardData}
+          pageLink="https://www.yanolja-research.com/report/list"
+          isScroll={true}
+          sectionTitle="연구보고서"
+          breakpoints={{
+            0: { slidesPerView: 1.8 },
+            768: { slidesPerView: 3.5 },
+            1024: { slidesPerView: 4.5 },
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </SectionLayoutBG>
+      <MainLayout
+        leftChildren={<NewsBoard />}
+        rightChildren={<UseDataComponent />}
+      />
+      <SectionLayoutBG>
+        <SnsComponent />
+      </SectionLayoutBG>
+
+      <Footer />
+    </main>
   );
 }

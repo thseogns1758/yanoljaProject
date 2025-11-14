@@ -1,0 +1,49 @@
+.item_container {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+.container .left,
+.container .right {
+  position: relative;
+}
+.container .left {
+  width: calc(76% - 40px);
+}
+.container .right {
+  width: calc(24% - 40px);
+}
+
+@media (max-width: 1100px) {
+  /* 메인스타일 */
+  .item_container.main_layout {
+    flex-direction: column;
+  }
+  .item_container.main_layout .left,
+  .item_container.main_layout .right {
+    flex: 1;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .left {
+    width: calc(65% - 40px);
+  }
+  .container .right {
+    width: calc(35% - 40px);
+  }
+}
+@media (max-width: 768px) {
+  .item_container {
+    flex-direction: column;
+  }
+  .container .left {
+    flex: 1;
+    width: 100%;
+  }
+  .container .right {
+    flex: 1;
+    width: 100%;
+  }
+}

@@ -1,0 +1,132 @@
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 52px 88px 95px;
+  background: #161515;
+}
+.footer_left {
+  display: flex;
+  flex-direction: column;
+}
+.footer_left img {
+  width: 143px;
+  margin-right: 35px;
+}
+.footer_right {
+  position: relative;
+}
+.footer_select {
+  width: 230px;
+  height: 48px;
+  position: relative;
+  margin-left: 30px;
+}
+footer select {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  border: none;
+  opacity: 0.6;
+  font-size: 0.875rem;
+  color: #fff;
+  appearance: none;
+}
+.footer_plus {
+  position: absolute;
+  right: 15px;
+  top: 17px;
+}
+.footer_bottom_left {
+  margin-top: 20px;
+}
+.footer_bottom_left ul li {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 18px;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.footer_bottom_left ul li + li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  width: 1px;
+  height: 11px;
+  transform: translate(0, -50%);
+  background-color: #3e3e3e;
+}
+.footer_bottom_left ul li a.privacy_link {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer_bottom_left ul {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+  opacity: 0.8;
+}
+
+.footer_bottom_left > p {
+  margin-top: 10px;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* 스티키 버튼 */
+.sticky_button {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  writing-mode: sideways-lr;
+  background: #f54b1e url(/images/icon/float_icon.png) no-repeat bottom center;
+  border-radius: 8px 0 0 8px;
+  bottom: 90px;
+  right: 0;
+}
+.icon_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: rotate(-90deg);
+}
+.icon_circle svg {
+  width: 18px;
+  height: 18px;
+}
+@media (max-width: 992px) {
+  footer {
+    flex-direction: column;
+    display: block;
+    padding: 36px 26px 65px;
+  }
+  footer select {
+    padding: 0 20px;
+    margin-left: 0;
+  }
+  .footer_select {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}

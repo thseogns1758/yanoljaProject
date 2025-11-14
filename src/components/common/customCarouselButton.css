@@ -1,0 +1,51 @@
+.custom_carousel_button {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.custom_carousel_button .custom_prev {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+  background-color: #ffffff;
+  z-index: 3;
+  filter: drop-shadow(0px 6px 24px rgba(0, 0, 0, 0.2));
+  border-radius: 50%;
+  left: -35px;
+}
+.custom_carousel_button .custom_next {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+  background-color: #ffffff;
+  z-index: 3;
+  filter: drop-shadow(0px 6px 24px rgba(0, 0, 0, 0.2));
+  border-radius: 50%;
+  right: -35px;
+}
+.custom_carousel_button .custom_icon_left {
+  background-image: url("/asset/icon_arrow_left.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.custom_carousel_button .custom_icon_right {
+  background-image: url("/asset/icon_arrow_right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 768px) {
+  .custom_carousel_button .custom_prev,
+  .custom_carousel_button .custom_next {
+    display: none !important;
+  }
+}
