@@ -20,7 +20,6 @@ footer {
   width: 230px;
   height: 48px;
   position: relative;
-  margin-left: 30px;
 }
 footer select {
   width: 100%;
@@ -32,6 +31,7 @@ footer select {
   font-size: 0.875rem;
   color: #fff;
   appearance: none;
+  padding-left: 30px;
 }
 .footer_plus {
   position: absolute;
