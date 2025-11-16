@@ -10,6 +10,7 @@ import { SliderData } from "@/type/slideType";
 
 const SwiperCarousel = ({ sliderData }: { sliderData: SliderData[] }) => {
   const [isPlaying, setIsPlaying] = useState(true);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const swiperRef = useRef<SwiperRef>(null);
 
   useEffect(() => {
@@ -23,6 +24,10 @@ const SwiperCarousel = ({ sliderData }: { sliderData: SliderData[] }) => {
 
     return () => clearInterval(interval);
   }, [isPlaying]);
+
+  const handleImageLoad = (id: number) => {
+    setLoadedImages((prev) => new Set(prev).add(id));
+  };
 
   return (
     <div className="swiper-container-wrapper">
@@ -63,6 +68,20 @@ const SwiperCarousel = ({ sliderData }: { sliderData: SliderData[] }) => {
                 </a>
               </div>
 
+              {!loadedImages.has(slide.id) && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: -1,
+                    backgroundColor: "#e5e5e5",
+                  }}
+                />
+              )}
+
               <Image
                 src={slide.backgroundImageUrl}
                 alt={slide.alt}
@@ -71,7 +90,10 @@ const SwiperCarousel = ({ sliderData }: { sliderData: SliderData[] }) => {
                   zIndex: -1,
                   objectFit: "cover",
                   objectPosition: "center 80%",
+                  opacity: loadedImages.has(slide.id) ? 1 : 0,
+                  transition: "opacity 0.3s ease-in-out",
                 }}
+                onLoad={() => handleImageLoad(slide.id)}
               />
             </div>
           </SwiperSlide>
