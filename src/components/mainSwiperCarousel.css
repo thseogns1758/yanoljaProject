@@ -1,13 +1,10 @@
-/* 카드 뒤에 더 많은 카드가 보이도록 설정 */
 .swiper-cards .swiper-slide {
   transform-origin: center center;
 }
 
-/* 비활성 카드들도 보이게 설정 */
 .swiper-cards .swiper-slide:not(.swiper-slide-active) {
 }
 
-/* 카드 스택 효과 강화 */
 .swiper-cards {
   overflow: visible;
   perspective: 1200px;
@@ -15,12 +12,12 @@
 .swiper-cards .swiper-slide-shadow,
 .swiper-cards .swiper-slide-shadow-left,
 .swiper-cards .swiper-slide-shadow-right {
-  display: none; /* 완전히 숨기기 */
+  display: none;
 }
-/* 스와이퍼 래퍼 */
+
 .swiper-wrapper {
 }
-/* 스와이퍼 아이템 */
+
 .swiper-item {
   height: 350px;
   display: flex;
@@ -36,7 +33,6 @@
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* 스와이퍼 컨테이너 래퍼 */
 .swiper-container-wrapper {
   position: relative;
   padding-top: 50px;
@@ -176,14 +172,14 @@ button {
   background-color: #000000;
   border-radius: 50px;
 }
-/* 화면 1100px 이하 */
+
 @media (max-width: 1100px) {
   .main_slide_title {
-    font-size: 2.25rem; /* 기존 2.75rem → 줄임 */
+    font-size: 2.25rem;
     line-height: 2.75rem;
   }
   .main_slide_sub_title {
-    font-size: 1rem; /* 기존 1.125rem → 줄임 */
+    font-size: 1rem;
     line-height: 1.25rem;
   }
   .swiper-pagination-bullet {
