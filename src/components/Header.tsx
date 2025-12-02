@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import "./header.css";
 
 const Header = () => {
@@ -9,7 +10,10 @@ const Header = () => {
   return (
     <div className="header_top">
       <a className="header_logo" href="">
-        <img src="/asset/logo.svg" alt="" />
+        {/* <img src="/asset/logo.svg" alt="" /> */}
+        <div style={{ color: "#f25430", fontSize: "34px", fontWeight: "bold" }}>
+          Toy-Yanolja
+        </div>
       </a>
 
       <nav className="header_nav">

@@ -50,7 +50,9 @@ const Footer = () => {
 
       <div className="footer_left">
         <div className="footer_top_left">
-          <img src="/asset/logo_white.svg" alt="" />
+          <div style={{ color: "#ffffffff", fontSize: "20px", opacity: "0.5" }}>
+            Toy-Yanolja
+          </div>
         </div>
         <div className="footer_bottom_left">
           <ul>
@@ -64,9 +66,10 @@ const Footer = () => {
             </li>
           </ul>
           <ul>
-            <li>(주)야놀자리서치</li>
+            {/* <li>(주)야놀자리서치</li>
             <li>대표이사. 박성식</li>
-            <li>사업자등록번호. 308-86-02788</li>
+            <li>사업자등록번호. 308-86-02788</li> */}
+            해당 페이지는 개인 포트폴리오용으로 제작되었습니다.
           </ul>
           <ul>
             <li>
@@ -80,11 +83,9 @@ const Footer = () => {
             </li>
             <li>
               E-mail.
-              <a href="mailto:yanoljaresearch@yanolja.com">
-                yanoljaresearch@yanolja.com
-              </a>
+              <a href="">개인 포트폴리오</a>
             </li>
-            <li>서울특별시 강남구 테헤란로 108길 42 MDM타워 4층</li>
+            {/* <li>서울특별시 강남구 테헤란로 108길 42 MDM타워 4층</li> */}
           </ul>
           <p>© YANOLJA RESEARCH. All rights reserved.</p>
         </div>
