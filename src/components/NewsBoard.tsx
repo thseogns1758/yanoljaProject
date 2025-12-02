@@ -38,10 +38,7 @@ const NewsBoard = () => {
           </li>
         </ul>
         <div>
-          <a
-            href="https://www.yanolja-research.com/media/list"
-            className="news_tab_more"
-          >
+          <a href="#" className="news_tab_more">
             <span>더보기</span>
             <MdArrowForwardIos size={16} style={{ marginBottom: "5px" }} />
           </a>

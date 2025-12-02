@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <div className="header_top">
-      <a className="header_logo" href="">
+      <a className="header_logo" href="#">
         {/* <img src="/asset/logo.svg" alt="" /> */}
         <div style={{ color: "#f25430", fontSize: "34px", fontWeight: "bold" }}>
           Toy-Yanolja
@@ -17,14 +17,10 @@ const Header = () => {
       </a>
 
       <nav className="header_nav">
-        <a href="https://www.yanolja-research.com/insight/list">ReSearch</a>
-        <a href="https://www.yanolja-research.com/datalab/tourism/about">
-          Datalab
-        </a>
-        <a href="https://www.yanolja-research.com/brand/attractiveness">
-          Indexes
-        </a>
-        <a href="https://www.yanolja-research.com/intro">About</a>
+        <a href="#">ReSearch</a>
+        <a href="#">Datalab</a>
+        <a href="#">Indexes</a>
+        <a href="#">About</a>
       </nav>
 
       <div className="right_box">
@@ -58,20 +54,16 @@ const Header = () => {
         <div className="burger_menu_field">
           <ul>
             <li>
-              <a href="https://www.yanolja-research.com/">HOME</a>
+              <a href="#">HOME</a>
             </li>
             <li>
-              <a href="https://www.yanolja-research.com/insight/list">
-                RESEARCH
-              </a>
+              <a href="#">RESEARCH</a>
             </li>
             <li>
-              <a href="https://www.yanolja-research.com/brand/attractiveness">
-                INDEXES
-              </a>
+              <a href="#">INDEXES</a>
             </li>
             <li>
-              <a href="https://www.yanolja-research.com/intro">ABOUT</a>
+              <a href="#">ABOUT</a>
             </li>
             <li>
               <select name="" id="" className="burger_lang">
@@ -89,77 +81,55 @@ const Header = () => {
           <div className="sub_nav_box">
             <ul>
               <li>
-                <a href="https://www.yanolja-research.com/insight/list">
-                  인사이트
-                </a>
+                <a href="#">인사이트</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/brief/list">브리프</a>
+                <a href="#">브리프</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/trend/list">
-                  동향보고서
-                </a>
+                <a href="#">동향보고서</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/report/list">
-                  연구보고서
-                </a>
+                <a href="#">연구보고서</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/brief/inquiry">
-                  구독신청
-                </a>
+                <a href="#">구독신청</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="https://www.yanolja-research.com/datalab/tourism/about">
-                  국내 숙박업 실적 지표
-                </a>
+                <a href="#">국내 숙박업 실적 지표</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/datalab/tourism/dashboard">
-                  관광지표 대시보드
-                </a>
+                <a href="#">관광지표 대시보드</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/datalab/download">
-                  데이터 다운로드
-                </a>
+                <a href="#">데이터 다운로드</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="https://www.yanolja-research.com/brand/attractiveness">
-                  야놀자 매력도 지수
-                </a>
+                <a href="#">야놀자 매력도 지수</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/brand/background">
-                  야놀자 브랜드자산 지수
-                </a>
+                <a href="#">야놀자 브랜드자산 지수</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="https://www.yanolja-research.com/intro">연구원 소개</a>
+                <a href="#">연구원 소개</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/greeting">인사말</a>
+                <a href="#">인사말</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/event/end/list">
-                  연구원 소식
-                </a>
+                <a href="#">연구원 소식</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/media/list">미디어</a>
+                <a href="#">미디어</a>
               </li>
               <li>
-                <a href="https://www.yanolja-research.com/notice/list">
-                  공지사항
-                </a>
+                <a href="#">공지사항</a>
               </li>
             </ul>
           </div>

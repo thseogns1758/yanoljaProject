@@ -38,10 +38,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <a
-        className="sticky_button"
-        href="https://www.yanolja-research.com/brief/inquiry"
-      >
+      <a className="sticky_button" href="#">
         <div className="icon_circle">
           <VscBellDot size={24} color="#F54B1E" />
         </div>
@@ -57,10 +54,7 @@ const Footer = () => {
         <div className="footer_bottom_left">
           <ul>
             <li>
-              <a
-                className="privacy_link"
-                href="https://www.yanolja-research.com/agreement/privacy"
-              >
+              <a className="privacy_link" href="#">
                 개인정보 처리방침
               </a>
             </li>
@@ -73,17 +67,13 @@ const Footer = () => {
           </ul>
           <ul>
             <li>
-              <a
-                href="https://www.kbei.org/whistle/center/?code=yanolja"
-                target="_blank"
-                style={{ color: "#ffd800" }}
-              >
+              <a style={{ color: "#ffd800" }} href="#">
                 Y-Siren (Compliance/Whistleblowing)
               </a>
             </li>
             <li>
               E-mail.
-              <a href="">개인 포트폴리오</a>
+              <a href="#">개인 포트폴리오</a>
             </li>
             {/* <li>서울특별시 강남구 테헤란로 108길 42 MDM타워 4층</li> */}
           </ul>

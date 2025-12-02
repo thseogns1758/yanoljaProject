@@ -24,7 +24,7 @@ export default function Home() {
             <li>
               <LinkItem
                 title="야놀자 매력도 지수"
-                link="https://www.yanolja-research.com/brand/attractiveness"
+                link="#"
                 imageUrl="/asset/bg_chart.svg"
                 backgroundColor="#F54B1E"
               />
@@ -32,7 +32,7 @@ export default function Home() {
             <li>
               <LinkItem
                 title="야놀자 브랜드자산 지수"
-                link="https://www.yanolja-research.com/brand/background"
+                link="#"
                 imageUrl="/asset/bg_glass.svg"
                 backgroundColor="#E43608"
               />
@@ -40,7 +40,7 @@ export default function Home() {
             <li>
               <LinkItem
                 title="데이터랩"
-                link="https://www.yanolja-research.com/datalab/tourism/about"
+                link="#"
                 backgroundColor="#F54B1E"
                 imageUrl="/asset/datalab.svg"
               />
@@ -52,7 +52,7 @@ export default function Home() {
         leftChildren={
           <SlideCarousel
             slideData={cardData}
-            pageLink="https://www.yanolja-research.com/insight/list"
+            pageLink="#"
             isScroll={true}
             sectionTitle="인사이트 / 브리프"
             breakpoints={{
@@ -65,7 +65,7 @@ export default function Home() {
         rightChildren={
           <SlideCarousel
             slideData={imageCardData}
-            pageLink="https://www.yanolja-research.com/trend/list"
+            pageLink="#"
             sectionTitle="동향보고서"
             breakpoints={{
               0: { slidesPerView: 1.5 },
@@ -79,7 +79,7 @@ export default function Home() {
       <SectionLayoutBG>
         <SlideCarousel
           slideData={simpleImageCardData}
-          pageLink="https://www.yanolja-research.com/report/list"
+          pageLink="#"
           isScroll={true}
           sectionTitle="연구보고서"
           breakpoints={{

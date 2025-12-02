@@ -15,7 +15,7 @@ const SnsComponent = () => {
           ))}
         </ul>
       </div>
-      <a href="https://www.yanolja-research.com/brief/inquiry">
+      <a href="#">
         <button className="subscribe_button">구독신청하기</button>
       </a>
     </div>
